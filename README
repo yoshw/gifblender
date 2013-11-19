@@ -1,0 +1,29 @@
+*** GIFBLENDER ***
+
+What is it?
+-----------
+
+A simple script for blending (i.e. averaging) all
+the frames in an animated GIF. The averaged image
+is output to a PNG.
+
+Usage
+-----
+
+Save the script in a directory with the GIF you want
+to blend. Run Python. Import the gifblender module.
+Call gifblender.gifblender(FILENAME), where FILENAME
+is the filename of the GIF in question.
+
+License
+-------
+
+gifblender is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public
+License. See module header and GPL.txt for more detail.
+
+Contact
+-------
+
+Yoshua Wakeham
+   email: yoshwakeham@gmail.com
