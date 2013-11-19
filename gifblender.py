@@ -47,19 +47,19 @@ def gifblender(filename):
     '''
     stem, ext = os.path.splitext(filename)
     assert ext == '.gif', 'Wrong input file type.'
-    source_gif = Image.open(filename)
+    gif = Image.open(filename)
 
     # Get GIF properties
-    width, height = source_gif.size
-    duration = count_frames(source_gif)
+    width, height = gif.size
+    duration = count_frames(gif)
 
     # Calculate aggregate RGB intensities for
     # each pixel coordinate in source GIF
-    aggregate_RGB = get_aggregate_RGB(source_gif)
+    aggregate_RGB = get_aggregate_RGB(gif)
     # Calculate average RGB values at each coordinate
     avg_RGB = get_avg_RGB(aggregate_RGB, duration)
     # Convert RGB values to list
-    img_data = img_dict_to_list(avg_RGB)
+    img_data = get_img_data(avg_RGB)
 
     # Write new image
     out_filename = stem + '_blent.png'
@@ -167,7 +167,7 @@ def get_avg_RGB(aggregates, num_frames):
     return averages
 
 
-def img_dict_to_list(image_dict):
+def get_img_data(image_dict):
     '''
     Takes a dictionary of pixel coordinates -> RGB intensities
     and returns a sorted list of those RGB values, ready to be
