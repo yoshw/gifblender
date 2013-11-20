@@ -11,9 +11,14 @@ Usage
 -----
 
 Save the script in a directory with the GIF you want
-to blend. Run Python. Import the gifblender module.
-Call gifblender.gifblender(FILENAME), where FILENAME
-is the filename of the GIF in question.
+to blend. Go to the command line and enter
+
+    % python gifblender.py FILENAME
+
+Where FILENAME is the name of the GIF in question,
+enclosed in quotes.
+
+Alternatively, import gifblender to access its functions.
 
 License
 -------
