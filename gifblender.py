@@ -44,7 +44,7 @@
 ###############################################################################
 
 from PIL import Image, ImageSequence
-import os
+import sys, os
 
 
 def gifblender(filename):
@@ -204,3 +204,9 @@ def get_img_data(image_dict):
         RGB = pair[1]
         img_list.append(RGB)
     return img_list
+
+
+if __name__ == '__main__':
+    # gifblender is being run as a standalone,
+    # assume that gif filename is given as arg
+    gifblender(sys.argv[1])
